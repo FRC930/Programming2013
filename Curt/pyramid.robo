@@ -20,6 +20,20 @@
   <set_4_array>FALSE</set_4_array>
   <variable_1>kinect_angle</variable_1>
 </Set_Variable>
+<Set_Variable>
+  <set_1_once>FALSE</set_1_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <value_1>:</value_1>
+  <set_1_array>FALSE</set_1_array>
+  <variable_2>end</variable_2>
+  <set_4_once>FALSE</set_4_once>
+  <set_2_once>FALSE</set_2_once>
+  <value_2>;</value_2>
+  <set_2_array>FALSE</set_2_array>
+  <set_4_array>FALSE</set_4_array>
+  <variable_1>divider</variable_1>
+</Set_Variable>
 <Microsoft_Kinect>
   <auto_exposure>TRUE</auto_exposure>
   <rgb_size_index>1</rgb_size_index>
@@ -48,20 +62,6 @@
   <enable_accelerometers>FALSE</enable_accelerometers>
   <top_line>480</top_line>
 </Microsoft_Kinect>
-<Set_Variable>
-  <set_1_once>FALSE</set_1_once>
-  <set_3_array>FALSE</set_3_array>
-  <set_3_once>FALSE</set_3_once>
-  <value_1>:</value_1>
-  <set_1_array>FALSE</set_1_array>
-  <variable_2>end</variable_2>
-  <set_4_once>FALSE</set_4_once>
-  <set_2_once>FALSE</set_2_once>
-  <value_2>;</value_2>
-  <set_2_array>FALSE</set_2_array>
-  <set_4_array>FALSE</set_4_array>
-  <variable_1>divider</variable_1>
-</Set_Variable>
 <Adaptive_Threshold>
   <mean_offset>-10</mean_offset>
   <filter_size>25</filter_size>
@@ -85,77 +85,68 @@
       <filter:7>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>.72</weight_threshold>
+        <weight_threshold>0.7</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>14</filter_id>
-        <invert_threshold>1</invert_threshold>
+        <filter_id>50</filter_id>
+        <invert_threshold>0</invert_threshold>
       </filter:7>
       <filter:5>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.70</weight_threshold>
+        <weight_threshold>0.07</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>66</filter_id>
+        <filter_id>36</filter_id>
         <invert_threshold>0</invert_threshold>
       </filter:5>
       <filter>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.37</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>38</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter>
+      <filter:6>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.21</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>14</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter:6>
+      <filter:4>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.04</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>18</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter:4>
+      <filter:3>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0</weight_threshold>
+        <invert_count>0</invert_count>
+        <maximum_size>240</maximum_size>
+        <filter_id>33</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter:3>
+      <filter:8>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.04</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>39</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter:8>
+      <filter:2>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
         <weight_threshold>0</weight_threshold>
         <invert_count>0</invert_count>
         <filter_id>8</filter_id>
         <invert_threshold>0</invert_threshold>
-        <minimum_size>1500</minimum_size>
-      </filter>
-      <filter:6>
-        <create_array>0</create_array>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>0.09</weight_threshold>
-        <invert_count>0</invert_count>
-        <image>Source</image>
-        <filter_id>77</filter_id>
-        <invert_threshold>0</invert_threshold>
-      </filter:6>
-      <filter:4>
-        <create_array>0</create_array>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>.3</weight_threshold>
-        <invert_count>0</invert_count>
-        <filter_id>56</filter_id>
-        <invert_threshold>0</invert_threshold>
-      </filter:4>
-      <filter:9>
-        <create_array>0</create_array>
-        <ratio>0.41000</ratio>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>0.19</weight_threshold>
-        <invert_count>0</invert_count>
-        <filter_id>63</filter_id>
-        <invert_threshold>1</invert_threshold>
-      </filter:9>
-      <filter:3>
-        <create_array>0</create_array>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>.7</weight_threshold>
-        <invert_count>0</invert_count>
-        <filter_id>56</filter_id>
-        <invert_threshold>1</invert_threshold>
-      </filter:3>
-      <filter:8>
-        <create_array>0</create_array>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>0.2</weight_threshold>
-        <invert_count>0</invert_count>
-        <filter_id>14</filter_id>
-        <invert_threshold>0</invert_threshold>
-      </filter:8>
-      <filter:2>
-        <create_array>0</create_array>
-        <count_threshold>0</count_threshold>
-        <weight_threshold>0.9</weight_threshold>
-        <invert_count>0</invert_count>
-        <filter_id>67</filter_id>
-        <invert_threshold>0</invert_threshold>
+        <minimum_size>59</minimum_size>
       </filter:2>
     </tab>
     <tab:6/>
@@ -164,7 +155,7 @@
   <sort_array_on_y>FALSE</sort_array_on_y>
   <largest_is_background>FALSE</largest_is_background>
   <sort_array_on_x>FALSE</sort_array_on_x>
-  <show_weights>TRUE</show_weights>
+  <show_weights>FALSE</show_weights>
   <create_blob_array_variable>FALSE</create_blob_array_variable>
 </Blob_Filter>
 <Fill>
@@ -285,7 +276,7 @@ if isArray(list) then
     ' determine distance in inches
     
 
-		totalDistance = 0.0055^2 * yHeight^2 -1.0129* yHeight + 52.97
+		'totalDistance = 0.0055^2 * yHeight^2 -1.0129* yHeight + 52.97
 			
 		SetVariable "Distance", CDbl((totalDistance * 100)/12)/100    'was 13.4 but changed back for new equation
 		SetVariable "test", CDbl(0)
@@ -406,7 +397,7 @@ YHeight
   <send_only_on_change>FALSE</send_only_on_change>
   <baud>12</baud>
   <data_bits>7</data_bits>
-  <port>COM4 - USB Serial Port</port>
+  <port>COM1</port>
   <send>[centerx][end]</send>
   <flow_control_dsr>FALSE</flow_control_dsr>
   <flow_control_out_x>FALSE</flow_control_out_x>

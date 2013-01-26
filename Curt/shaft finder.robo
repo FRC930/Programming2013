@@ -406,7 +406,7 @@ YHeight
   <send_only_on_change>FALSE</send_only_on_change>
   <baud>12</baud>
   <data_bits>7</data_bits>
-  <port>COM4 - USB Serial Port</port>
+  <port>COM1</port>
   <send>[centerx][end]</send>
   <flow_control_dsr>FALSE</flow_control_dsr>
   <flow_control_out_x>FALSE</flow_control_out_x>
