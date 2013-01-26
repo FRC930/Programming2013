@@ -1,0 +1,35 @@
+<head><version>2.48.16</version></head>
+<Adaptive_Threshold>
+  <mean_offset>-10</mean_offset>
+  <filter_size>25</filter_size>
+  <min_threshold>0</min_threshold>
+  <channel_type>2</channel_type>
+  <max_threshold>255</max_threshold>
+</Adaptive_Threshold>
+<Microsoft_Kinect>
+  <ir_intensity_value>30</ir_intensity_value>
+  <auto_exposure>TRUE</auto_exposure>
+  <rgb_size_index>1</rgb_size_index>
+  <depth_size_index>1</depth_size_index>
+  <request_ir>FALSE</request_ir>
+  <flip_depth>FALSE</flip_depth>
+  <merge_frames>FALSE</merge_frames>
+  <exposure_value>654</exposure_value>
+  <auto_white_balance>TRUE</auto_white_balance>
+  <show_rgb>TRUE</show_rgb>
+  <gamma>1.0</gamma>
+  <contrast_value>-1</contrast_value>
+  <saturation_value>6</saturation_value>
+  <request_depth>FALSE</request_depth>
+  <motor_pitch_value>64</motor_pitch_value>
+  <flip_rgb>FALSE</flip_rgb>
+  <max_threshold>2047</max_threshold>
+  <request_rgb>TRUE</request_rgb>
+  <bottom_line>0</bottom_line>
+  <led_value>1</led_value>
+  <smooth>0</smooth>
+  <show_depth>TRUE</show_depth>
+  <min_threshold>160</min_threshold>
+  <enable_accelerometers>FALSE</enable_accelerometers>
+  <top_line>480</top_line>
+</Microsoft_Kinect>

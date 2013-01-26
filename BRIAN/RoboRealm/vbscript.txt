@@ -1,0 +1,61 @@
+
+list = GetArrayVariable("BFR_COORDINATES")
+if isArray(list) then
+  if ubound(list) > 0 then
+
+		targetPixelHeight = 0
+    targetSamples = 0
+
+    ' calibrated for an Kinect IR camera
+    imageHeight = GetVariable("IMAGE_HEIGHT")
+  	cameraFieldOfView = 44.3'43.95      '43.0
+	  targetHeight = 20.0
+
+    for i = 0 to ubound(list) step 8
+      ' grab list of coordinates from blob_replace
+	  	' note the array is sorted by previous module in a specific order
+      righty = list(i+1)
+      rightyy = list(i+7)
+      lefty = list(i+3)
+      leftyy = list(i+5)
+
+			rightx = list(i+0)
+      rightxx = list(i+2)
+      leftx = list(i+4)
+      leftxx = list(i+6)
+
+			SetVariable "centerx", CLng((rightx + rightxx + leftx + leftxx)/4)
+
+
+			' based on these two side lines get the center line height
+		  ' the center line is used since we want to aim to the center
+  		' of the target. This also removes any perspective distortion
+	  	' where the right or left size may be a couple inches closer
+		  ' or futher away from the camera
+  		targetPixelHeight = targetPixelHeight + ((lefty - leftyy) + (righty - rightyy)) / 2
+			
+			SetVariable "YHeight", CDbl(((lefty + righty)/2) - ((leftyy + rightyy)/2))
+			
+			targetSamples = targetSamples + 1
+
+    next
+
+		targetPixelHeight = targetPixelHeight / targetSamples
+
+    ' we can use a known distance to determine FOV if we don't know it
+	  ' measuredDistance = 10.0*12.0
+ 	  ' write "Calculated FOV " & (((atan((((targetHeight*imageHeight)/targetPixelHeight)/2)/measuredDistance)*2.0)*180.0)/3.14159) & vbCRLF
+
+    ' determine distance in inches
+    totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
+	
+	
+		'totalDistance = 41.867^(1/(0.012*targetPixelHeight))
+		
+		'totalDistance  = 174.33^(1/(0.054 * targetPixelHeight))
+				
+		'SetVariable "Distance", CDbl(totalDistance * 100)/ 27.7
+		SetVariable "Distance", CDbl((totalDistance * 100)/13.4)/100                     ' * 100)/12)/100 'CLng((((TotalDistance*100)/12)/100) + 4.1 )
+
+	end if
+end if
