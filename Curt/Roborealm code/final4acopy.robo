@@ -1,4 +1,20 @@
 <head><version>2.48.16</version></head>
+<Set_Variable>
+  <set_2_array>FALSE</set_2_array>
+  <set_4_array>FALSE</set_4_array>
+  <set_1_array>FALSE</set_1_array>
+  <value_1>90</value_1>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_once>TRUE</set_3_once>
+  <set_4_once>TRUE</set_4_once>
+  <variable_1>kinect_angle</variable_1>
+  <value_2>0.00</value_2>
+  <variable_2>test</variable_2>
+  <set_1_once>FALSE</set_1_once>
+  <set_3_array>FALSE</set_3_array>
+  <value_3>-1</value_3>
+  <value_4>-1</value_4>
+</Set_Variable>
 <RGB_Filter disabled>
   <channel>2</channel>
   <hysteresis>0</hysteresis>
@@ -6,38 +22,10 @@
   <min_value>100</min_value>
   <hue_value>10</hue_value>
 </RGB_Filter>
-<Set_Variable>
-  <set_1_once>FALSE</set_1_once>
-  <set_3_array>FALSE</set_3_array>
-  <set_3_once>FALSE</set_3_once>
-  <value_1>90</value_1>
-  <set_1_array>FALSE</set_1_array>
-  <variable_2>test</variable_2>
-  <set_4_once>FALSE</set_4_once>
-  <set_2_once>FALSE</set_2_once>
-  <value_2>0.00</value_2>
-  <set_2_array>FALSE</set_2_array>
-  <set_4_array>FALSE</set_4_array>
-  <variable_1>kinect_angle</variable_1>
-</Set_Variable>
-<Set_Variable>
-  <set_1_once>FALSE</set_1_once>
-  <set_3_array>FALSE</set_3_array>
-  <set_3_once>FALSE</set_3_once>
-  <value_1>:</value_1>
-  <set_1_array>FALSE</set_1_array>
-  <variable_2>end</variable_2>
-  <set_4_once>FALSE</set_4_once>
-  <set_2_once>FALSE</set_2_once>
-  <value_2>;</value_2>
-  <set_2_array>FALSE</set_2_array>
-  <set_4_array>FALSE</set_4_array>
-  <variable_1>divider</variable_1>
-</Set_Variable>
 <Microsoft_Kinect>
   <auto_exposure>TRUE</auto_exposure>
   <rgb_size_index>1</rgb_size_index>
-  <ir_intensity_value>30</ir_intensity_value>
+  <ir_intensity_value>50</ir_intensity_value>
   <depth_size_index>1</depth_size_index>
   <flip_depth>FALSE</flip_depth>
   <request_ir>TRUE</request_ir>
@@ -62,6 +50,20 @@
   <enable_accelerometers>FALSE</enable_accelerometers>
   <top_line>480</top_line>
 </Microsoft_Kinect>
+<Set_Variable>
+  <set_1_once>FALSE</set_1_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <value_1>:</value_1>
+  <set_1_array>FALSE</set_1_array>
+  <variable_2>end</variable_2>
+  <set_4_once>FALSE</set_4_once>
+  <set_2_once>FALSE</set_2_once>
+  <value_2>;</value_2>
+  <set_2_array>FALSE</set_2_array>
+  <set_4_array>FALSE</set_4_array>
+  <variable_1>divider</variable_1>
+</Set_Variable>
 <Adaptive_Threshold>
   <mean_offset>-10</mean_offset>
   <filter_size>25</filter_size>
@@ -69,7 +71,7 @@
   <channel_type>2</channel_type>
   <max_threshold>255</max_threshold>
 </Adaptive_Threshold>
-<Close>
+<Close disabled>
   <restrict_dilation>FALSE</restrict_dilation>
   <erode_count>3</erode_count>
   <dilate_count>3</dilate_count>
@@ -85,18 +87,17 @@
       <filter:7>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.6</weight_threshold>
+        <weight_threshold>0.68</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>67</filter_id>
-        <invert_threshold>0</invert_threshold>
+        <filter_id>14</filter_id>
+        <invert_threshold>1</invert_threshold>
       </filter:7>
       <filter:5>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.94</weight_threshold>
+        <weight_threshold>0.70</weight_threshold>
         <invert_count>0</invert_count>
-        <object_coord>o0</object_coord>
-        <filter_id>25</filter_id>
+        <filter_id>66</filter_id>
         <invert_threshold>0</invert_threshold>
       </filter:5>
       <filter>
@@ -106,39 +107,56 @@
         <invert_count>0</invert_count>
         <filter_id>8</filter_id>
         <invert_threshold>0</invert_threshold>
-        <minimum_size>60</minimum_size>
+        <minimum_size>500</minimum_size>
       </filter>
       <filter:6>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.50</weight_threshold>
+        <weight_threshold>0.09</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>56</filter_id>
+        <image>Current</image>
+        <filter_id>77</filter_id>
         <invert_threshold>0</invert_threshold>
       </filter:6>
       <filter:4>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.21</weight_threshold>
+        <weight_threshold>.3</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>14</filter_id>
+        <filter_id>56</filter_id>
         <invert_threshold>0</invert_threshold>
       </filter:4>
+      <filter:9>
+        <create_array>0</create_array>
+        <ratio>0.41000</ratio>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.19</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>63</filter_id>
+        <invert_threshold>1</invert_threshold>
+      </filter:9>
       <filter:3>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0.07</weight_threshold>
+        <weight_threshold>.7</weight_threshold>
         <invert_count>0</invert_count>
-        <filter_id>36</filter_id>
-        <invert_threshold>0</invert_threshold>
+        <filter_id>56</filter_id>
+        <invert_threshold>1</invert_threshold>
       </filter:3>
+      <filter:8>
+        <create_array>0</create_array>
+        <count_threshold>0</count_threshold>
+        <weight_threshold>0.2</weight_threshold>
+        <invert_count>0</invert_count>
+        <filter_id>14</filter_id>
+        <invert_threshold>0</invert_threshold>
+      </filter:8>
       <filter:2>
         <create_array>0</create_array>
         <count_threshold>0</count_threshold>
-        <weight_threshold>0</weight_threshold>
+        <weight_threshold>0.86</weight_threshold>
         <invert_count>0</invert_count>
-        <maximum_size>400</maximum_size>
-        <filter_id>33</filter_id>
+        <filter_id>67</filter_id>
         <invert_threshold>0</invert_threshold>
       </filter:2>
     </tab>
@@ -164,7 +182,18 @@
   <shape_index>15</shape_index>
   <order_array_on_y>FALSE</order_array_on_y>
 </Blob_Replace>
-<VBScript_Program disabled>
+<CScript_Program disabled>
+  <tab_size_index>1</tab_size_index>
+  <script>//dbl i = getVariable("Distance");
+float coords[64];
+//float *TEST1 = 0;
+//int i = 
+int num = getFloatArrayVariable("BFR_COORDINATES", coords, 64);
+
+setFloatVariable("TEST1", int(coords[0]));</script>
+  <source_mode>gui</source_mode>
+</CScript_Program>
+<VBScript_Program>
   <tab_size_index>1</tab_size_index>
   <script>
 
@@ -188,11 +217,14 @@ if isArray(list) then
       leftxx = list(i+6)
 
 			
-			'cntrx = CLng((rightx + rightxx + leftx + leftxx)/4)
-			SetVariable "centerx", CLng((rightx + rightxx + leftx + leftxx)/4)
+			cntrx = CLng((rightx + rightxx + leftx + leftxx)/4)
+			'SetVariable "centerx", CLng((rightx + rightxx + leftx + leftxx)/4)
 
-			SetVariable "YHeight", CDbl(((lefty + righty)/2) - ((leftyy + rightyy)/2))
+
 			
+			yHeight = (((lefty + righty)/2) - ((leftyy + rightyy)/2))
+
+			SetVariable "YHeight", CDbl(yHeight)			
 			targetSamples = targetSamples + 1
 
     next
@@ -206,16 +238,15 @@ if isArray(list) then
  	  ' write "Calculated FOV " &amp; (((atan((((targetHeight*imageHeight)/targetPixelHeight)/2)/measuredDistance)*2.0)*180.0)/3.14159) &amp; vbCRLF
 
     ' determine distance in inches
-    totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
-	
-	
-		'totalDistance = 41.867^(1/(0.012*targetPixelHeight))
-		
-		'totalDistance  = 174.33^(1/(0.054 * targetPixelHeight))
-				
-		'SetVariable "Distance", CDbl(totalDistance * 100)/ 27.7
-		SetVariable "Distance", CDbl((totalDistance * 100)/13.4)/100                     ' * 100)/12)/100 'CLng((((TotalDistance*100)/12)/100) + 4.1 )
-		SetVariable "test", CDbl(0)
+    
+
+		'totalDistance = 0.0055^2 * yHeight^2 -1.0129* yHeight + 52.97
+			
+		'SetVariable "Distance", CDbl((totalDistance * 100)/12)/100    'was 13.4 but changed back for new equation
+		SetVariable "Distance", CDbl((-24.59*(Log(yHeight)/Log(2.71828))) + 112.660)
+		'SetVariable "Distance2", CDbl((-0.0003*yHeight*yHeight*yHeight) + (.0485*yHeight*yHeight)-(3.3857*yHeight)+96.697)
+		SetVariable "Distance2", CDbl(((8*10^(-9))*(yHeight^6))-((3*10^(-6))*(yHeight^5))+(.0004*(yHeight^4))-(.0298*(yHeight^3))+(1.1954*(yHeight^2))-(25.87*yHeight)+267.91)
+		'SetVariable "test", CDbl(0)
 
 
 	end if
@@ -271,25 +302,17 @@ if isArray(list) then
 
 		'totalDistance = 0.0055^2 * yHeight^2 -1.0129* yHeight + 52.97
 			
-		SetVariable "Distance", CDbl((totalDistance * 100)/12)/100    'was 13.4 but changed back for new equation
+		'SetVariable "Distance", CDbl((totalDistance * 100)/12)/100    'was 13.4 but changed back for new equation
+		SetVariable "Distance", CDbl((-24.59*(Log(yHeight)/Log(2.71828))) + 112.660)
 		SetVariable "test", CDbl(0)
 
 
 	end if
-end if</script>
+end if
+
+</script>
   <source_mode>gui</source_mode>
 </VBScript_Program>
-<CScript_Program disabled>
-  <tab_size_index>1</tab_size_index>
-  <script>//dbl i = getVariable("Distance");
-float coords[64];
-//float *TEST1 = 0;
-//int i = 
-int num = getFloatArrayVariable("BFR_COORDINATES", coords, 64);
-
-setFloatVariable("TEST1", int(coords[0]));</script>
-  <source_mode>gui</source_mode>
-</CScript_Program>
 <VBScript_Program disabled>
   <tab_size_index>1</tab_size_index>
   <script>
@@ -364,7 +387,7 @@ Distance
   <font_color>white</font_color>
   <dim_background>TRUE</dim_background>
   <border_color>red</border_color>
-  <font_size>Normal (10pt)</font_size>
+  <font_size>Tiny (6pt)</font_size>
   <southwest>FPS
 YHeight
 </southwest>
@@ -372,7 +395,7 @@ YHeight
 <Serial disabled>
   <remember_as_default>TRUE</remember_as_default>
   <enable_send_sequence>TRUE</enable_send_sequence>
-  <port>COM1</port>
+  <port>COM4 - USB Serial Port</port>
   <data_bits>7</data_bits>
   <baud>12</baud>
   <flow_control_in_x>FALSE</flow_control_in_x>
@@ -382,7 +405,7 @@ YHeight
   <send_only_on_change>TRUE</send_only_on_change>
   <flow_control_out_x>FALSE</flow_control_out_x>
 </Serial>
-<Serial>
+<Serial disabled>
   <enable_send_sequence>TRUE</enable_send_sequence>
   <flow_control_cts>FALSE</flow_control_cts>
   <read_rate_index>-1</read_rate_index>
