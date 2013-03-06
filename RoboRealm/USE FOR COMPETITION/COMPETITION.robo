@@ -17,13 +17,6 @@
   <variable_3>centerx</variable_3>
   <value_4>-1</value_4>
 </Set_Variable>
-<RGB_Filter disabled>
-  <channel>2</channel>
-  <hysteresis>0</hysteresis>
-  <result_type>2</result_type>
-  <min_value>100</min_value>
-  <hue_value>10</hue_value>
-</RGB_Filter>
 <Microsoft_Kinect>
   <auto_exposure>TRUE</auto_exposure>
   <rgb_size_index>1</rgb_size_index>
@@ -52,6 +45,13 @@
   <enable_accelerometers>FALSE</enable_accelerometers>
   <top_line>480</top_line>
 </Microsoft_Kinect>
+<RGB_Filter disabled>
+  <channel>2</channel>
+  <hysteresis>0</hysteresis>
+  <result_type>2</result_type>
+  <min_value>100</min_value>
+  <hue_value>10</hue_value>
+</RGB_Filter>
 <Set_Variable>
   <set_1_once>FALSE</set_1_once>
   <set_3_array>FALSE</set_3_array>
@@ -248,9 +248,9 @@ if isArray(list) then
 		SetVariable "Distance", CDbl((-24.59*(Log(yHeight)/Log(2.71828))) + 112.660)
 		'SetVariable "Distance2", CDbl((-0.0003*yHeight*yHeight*yHeight) + (.0485*yHeight*yHeight)-(3.3857*yHeight)+96.697)
 		SetVariable "Distance2", CDbl(((8*10^(-9))*(yHeight^6))-((3*10^(-6))*(yHeight^5))+(.0004*(yHeight^4))-(.0298*(yHeight^3))+(1.1954*(yHeight^2))-(25.87*yHeight)+267.91)
-		'SetVariable "test", CDbl(0)
+		'SetVariable "test", CDbl(0)
 		SetVariable "FRONT SPEED", CDbl((.2612*yHeight*yHeight)-(36.863*yHeight) + (2577.9))
-    SetVariable "ANGLE", CDbl((.00003*yHeight*yHeight) + (0.0042*yHeight) + .2806)
+    SetVariable "ANGLE", CDbl((.00003*yHeight*yHeight) + (0.004*yHeight) + .2358)
 
 	end if
 end if</script>
@@ -350,3 +350,13 @@ YHeight
   <flow_control_in_x>FALSE</flow_control_in_x>
   <remember_as_default>TRUE</remember_as_default>
 </Serial>
+<Display_Variables>
+  <display_as_annotation>FALSE</display_as_annotation>
+  <display_value_only>FALSE</display_value_only>
+  <font_color>white</font_color>
+  <dim_background>TRUE</dim_background>
+  <southeast>YHeight
+</southeast>
+  <border_color>red</border_color>
+  <font_size>Huge (24pt)</font_size>
+</Display_Variables>
